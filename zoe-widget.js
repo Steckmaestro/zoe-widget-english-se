@@ -212,7 +212,7 @@ async function createWidget(items) {
     column1.addSpacer(10);
   }
 
-  if (ZOE_Phase == 1 && typeof data.batteryStatus != "undefined") {
+  if (typeof data.batteryStatus != "undefined") {
     if (typeof data.batteryStatus.attributes.batteryTemperature != "undefined") {
       let TempStack = column1.addStack();
       TempStack.layoutVertically();
