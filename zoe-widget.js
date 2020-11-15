@@ -167,9 +167,7 @@ async function createWidget(items) {
   if (!data.batteryStatus || typeof data.batteryStatus == "undefined") {
     if (config.runsInWidget) {
       // only in widget
-      throw new Error(
-        "Quota Limit! – Couldn't fetch data right now. Try later or contact Renault."
-      );
+      throw new Error("Quota Limit! – Couldn't fetch data right now. Try later or contact Renault.");
     } else {
       console.log("Quota Limit! – Couldn't fetch data right now. Try later or contact Renault.");
     }
@@ -626,8 +624,7 @@ async function postStatus(endpoint, jsondata, version, kamareonURL, account_id, 
     pushBody = "Sending your request was successful.";
     sound = "piano_success";
   } else {
-    pushBody =
-      "Something went wrong trying to send your request. Code:" + request.response.statusCode;
+    pushBody = "Something went wrong trying to send your request. Code:" + request.response.statusCode;
     sound = "piano_error";
   }
 
